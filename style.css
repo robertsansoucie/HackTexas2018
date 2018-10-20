@@ -1,0 +1,38 @@
+/*tr:hover {
+    background-color: #c7d4dd;
+}
+
+tr:hover td {
+    background-color: transparent; /* or #000 
+
+}
+
+table {
+  overflow: hidden;
+  }
+
+*/
+
+table {
+  overflow: hidden;
+}
+tr:hover {
+  background-color: #cc5500;
+}
+
+
+td, th {
+  position: relative;
+}
+
+td:hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #cc5500;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
