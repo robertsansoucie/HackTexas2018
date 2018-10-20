@@ -1,8 +1,8 @@
 var div = document.createElement("div");
-div.id = "putTheShitHere"
+div.id = "putTheShitHere";
 div.style.float = "right";
-div.style.width = "100px";
-div.style.height = "100px";
+div.style.width = "500px";
+div.style.height = "500px";
 div.style.background = "red";
 div.style.position = "absolute";
 div.style.top = "10px";
