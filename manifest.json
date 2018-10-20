@@ -4,7 +4,7 @@
 	"description": "Gheith's website is badTM",
 	"manifest_version": 2,
 
-	"author": "Aaron Garay, Eleni Georgiou, Robert San Soucie"
+	"author": "Aaron Garay, Eleni Georgiou, Robert San Soucie",
 	
 	"browser_action": {
 		"default_title": "Have a good day"
