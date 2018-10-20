@@ -7,5 +7,5 @@ var firstCommitColumns = firstCommitRow.childNodes;
 var commitId = firstCommitColumns[0];
 
 var header = document.getElementsByTagName("h2")[0];
-header.innerHTML += commitId;
+header.innerHTML += "\n" + commitId.innerHTML;
 
