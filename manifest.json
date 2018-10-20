@@ -6,7 +6,7 @@
 
 	"author": "Aaron Garay, Eleni Georgiou, Robert San Soucie",
 	
-	"permissions": ["activeTab", "tabs", "http://www.cs.utexas.edu/~gheith/*.html"],
+	"permissions": ["storage", "activeTab", "tabs", "http://www.cs.utexas.edu/~gheith/*.html"],
 	
 	"content_scripts": [
 		{	

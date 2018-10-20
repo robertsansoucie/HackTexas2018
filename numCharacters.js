@@ -7,24 +7,38 @@ for(var x = 1; x < tableRows.length; x++) {
 
 var div = document.getElementById("putTheShitHere");
 
+var sliderValue = 'sliderValue';
+
 var slider = document.createElement("input");
+var output = document.createElement("p");
 slider.type = "range";
 slider.min = "2";
 slider.max = "40";
-slider.value = "40";
 slider.id = "numCharactersInCommitSlider";
-
-var output = document.createElement("p");
-
-output.innerHTML = slider.value;
+chrome.storage.sync.get([sliderValue], function(result) {
+	if(result.sliderValue === undefined) {
+		slider.value = 40;
+		output.innerHTML = 40;
+	}
+	else {
+		slider.value = result.sliderValue;
+		output.innerHTML = result.sliderValue;
+	}
+	console.log(slider.value);
+});
 
 slider.oninput = function() {
-	output.innerHTML = this.value;
+	var val = this.value;
+	output.innerHTML = val;
 	for(var x = 1; x < tableRows.length; x++) {
 		var td = tableRows[x].childNodes[0];
 		var commitId = td.id;
-		td.innerHTML = commitId.substring(0, this.value);
+		td.innerHTML = commitId.substring(0, val);
 	}
+	var obj = {};
+	obj[sliderValue] = val;
+	chrome.storage.sync.set(obj, function() {
+	});
 }
 
 div.appendChild(slider);
