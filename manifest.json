@@ -6,6 +6,7 @@
 
 	"author": "Aaron Garay, Eleni Georgiou, Robert San Soucie",
 	
+
 	"browser_action": {
 		"default_title": "Have a good day"
 	},
@@ -14,5 +15,12 @@
 		"newtab": "newtab.html"
 	},
 
-	"permissions": ["activeTab"]
+	"permissions": ["activeTab", "tabs", "www.cs.utexas.edu/~gheith/*.html"],
+	
+	"content_scripts": [
+		{	
+			"matches": ["www.cs.utexas.edu/~gheith/*.html"],
+			"js": [MISSING()]
+		}
+	]
 }
