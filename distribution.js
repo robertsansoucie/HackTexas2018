@@ -1,19 +1,43 @@
+//import * from 'Math';
 var rows = document.getElementsByTagName("TR");
 
 var numPassed = [];
 var i;
 for (i=1; i<rows.length; i++) {
-        var amount = rows[i].getElementsByTagName("EM")[0];
+        var amount = parseInt(rows[i].childNodes[1].childNodes[0].innerHTML,10);
         numPassed.push(amount);
 }
 
-var avg = 0;
-i = 0
-for(i=0; i<numPassed.length; i++){
-        avg += numPassed[i];
-}
-avg /= numPassed.length;
 
-for(i=1; i<rows.length; i++) {
-        rows[i].getElementsByTagName("EM")[0].innerHTML = avg;
+
+
+function getMean(array){
+	var sum = 0;
+    var length = array.length;
+	for(var i=0; i<length; i++){
+		sum += array[i];
+	}
+	sum /= length;
+	return sum;
 }
+
+
+function getSd(array){
+	var N = array.length;
+	var mean = getMean(array);
+	var diffArray = [];
+	for(var i=0; i<N; i++){
+		var diff = (array[i]-mean);
+		diffArray.push(diff*diff);
+	}
+	var secondMean = getMean(diffArray);
+	return Math.sqrt(secondMean, 0.5);
+}
+
+var avg = getMean(numPassed);
+
+var sd = getSd(numPassed);
+
+console.log(Number(avg).toFixed(2));
+console.log(Number(sd).toFixed(2));
+
