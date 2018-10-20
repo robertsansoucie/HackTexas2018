@@ -1,3 +1,11 @@
-var headers = document.getElementsByTagName("h2");
+var tableRows = document.getElementsByTagName("tr");
 
-headers[0].style.color = 'red';
+var firstCommitRow = tableRows[1];
+
+var firstCommitColumns = firstCommitRow.childNodes;
+
+var commitId = firstCommitColumns[0];
+
+var header = document.getElementsByTagName("h2")[0];
+header.innerHTML += commitId;
+
