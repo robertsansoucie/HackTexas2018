@@ -1,25 +1,12 @@
-/*tr:hover {
-    background-color: #c7d4dd;
-}
-
-tr:hover td {
-    background-color: transparent; /* or #000 
-
-}
-
+/* Adds Row and Column highlighting! */
 table {
   overflow: hidden;
-  }
-
-*/
-
-table {
-  overflow: hidden;
+  
 }
 tr:hover {
   background-color: #cc5500;
+  color: #ffffff;
 }
-
 
 td, th {
   position: relative;

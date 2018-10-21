@@ -41,5 +41,14 @@ slider.oninput = function() {
 	});
 }
 
+ // creating feature for dark mode
+// var darkModeSlider = document.createElement("input");
+// darkModeSlider.type = "radio"; 
+// darkModeSlider.id = "darkModeRadio";
+// darkModeSlide.oninput = function () {
+
+// }
+
 div.appendChild(slider);
 div.appendChild(output);
+//div.appendChild(darkModeSlider);
