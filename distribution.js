@@ -41,3 +41,25 @@ var sd = getSd(numPassed);
 console.log(Number(avg).toFixed(2));
 console.log(Number(sd).toFixed(2));
 
+
+var nestNumPassed = []
+for(var i = 0; i<numPassed.length; i++){
+	var current = []
+	current.push(numPassed[i]);
+	nestNumPassed.push(current);
+}
+
+google.charts.load("current", {packages:["corechart"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+	
+	var data = google.visualization.arrayToDataTable(nestNumPassed);
+	
+	var options = {
+		title: 'Test Cases Passed',
+		legend: {position: 'none'},
+	};
+
+	var chart = new google.visualization.Histogram(document.getElementById('chart'));
+	chart.draw(data, options);
+}
