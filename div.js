@@ -1,20 +1,17 @@
 
 
+/* Shit */
 
-var div = document.createElement("sidenav");
+
+var div = document.createElement("div");
+div.class = "sidenav";
 div.id = "putTheShitHere";
 div.style.float = "right";
-// div.style.width = "500px";
-// div.style.height = "500px";
 div.style.background = "#4286f4";
-//div.style.position = "absolute";
-// div.style.top = "10px";
-// div.style.right = "10px";
 
-
-
-var p = document.createElement("p");
-p.innerHTML = "Add shit here k";
+var p = document.createElement("h1");
+p.id = "instructions";
+p.innerHTML = "characters";
 
 div.appendChild(p);
 

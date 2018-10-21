@@ -13,7 +13,6 @@ th {
   background-color:#fff;
 }
 
-
 td, th {
   position: relative;
   border: 1px solid #999;
@@ -44,30 +43,24 @@ td:hover::before {
     z-index: -2;        
 }
 
-//Trivial
 body {
   margin:1em;
 }
 
+#sliderOutput, #instructions {
+  color: white;
+  text-align:center;
 
-/* SIDE NAV */
-
-
-
-
-#putTheShitHere a {
-    position: absolute; /* Position them relative to the browser window */
-    left: -80px; /* Position them outside of the screen */
-    transition: 0.3s; /* Add transition on hover */
-    padding: 15px; /* 15px padding */
-    width: 100px; /* Set a specific width */
-    text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Increase font size */
-    color: white; /* White text color */
-    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
 }
-
-#putTheShitHere a:hover {
-    left: 0; /* On mouse-over, make the elements appear as they should */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 150; /* 0 width - change this with JavaScript */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    padding: 2px;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
 }
 

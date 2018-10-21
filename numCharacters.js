@@ -11,6 +11,7 @@ var sliderValue = 'sliderValue';
 
 var slider = document.createElement("input");
 var output = document.createElement("p");
+output.id = "sliderOutput";
 slider.type = "range";
 slider.min = "2";
 slider.max = "40";
