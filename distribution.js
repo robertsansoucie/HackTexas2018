@@ -4,7 +4,7 @@ var rows = document.getElementsByTagName("TR");
 var numPassed = [];
 var i;
 for (i=1; i<rows.length; i++) {
-        var amount = parseInt(rows[i].childNodes[1].childNodes[0].innerHTML,10);
+        var amount = parseInt(rows[i].childNodes[2].childNodes[0].innerHTML,10);
         numPassed.push(amount);
 }
 
