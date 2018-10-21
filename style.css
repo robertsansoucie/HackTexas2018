@@ -1,6 +1,7 @@
 /* Adds Row and Column highlighting! */
 table {
   overflow: hidden;
+  display:inline-block;
   
 }
 tr:hover {
@@ -8,8 +9,16 @@ tr:hover {
   color: #ffffff;
 }
 
+th {
+  background-color:#fff;
+}
+
+
 td, th {
   position: relative;
+  border: 1px solid #999;
+  padding: .5px;
+   
 }
 
 td:hover::after,
@@ -23,3 +32,42 @@ th:hover::after {
   width: 100%;
   z-index: -1;
 }
+
+td:hover::before { 
+    background-color: #eee;
+    content: '';  
+    height: 100%;
+    left: -5000px;
+    position: absolute;  
+    top: 0;
+    width: 10000px;   
+    z-index: -2;        
+}
+
+//Trivial
+body {
+  margin:1em;
+}
+
+
+/* SIDE NAV */
+
+
+
+
+#putTheShitHere a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -80px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 100px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#putTheShitHere a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
