@@ -1,22 +1,34 @@
 
 
+/* Shit */
 
-var div = document.createElement("sidenav");
+
+var div = document.createElement("div");
+div.class = "sidenav";
 div.id = "putTheShitHere";
 div.style.float = "right";
-// div.style.width = "500px";
-// div.style.height = "500px";
 div.style.background = "#4286f4";
-//div.style.position = "absolute";
-// div.style.top = "10px";
-// div.style.right = "10px";
-
-
 
 var p = document.createElement("p");
-p.innerHTML = "Add shit here k";
+p.id = "instructions";
+p.innerHTML = "characters";
 
 div.appendChild(p);
+
+
+
+
+var bub = document.createElement("button");
+bub.id = "nightmodebub"; // aria-hidden
+
+
+document.getElementsByTagName("body")[0].appendChild(div);
+document.getElementsByTagName("div")[0].appendChild(bub);
+
+
+document.getElementById('nightmodebub').addEventListener('click', function() {
+  document.body.classList.toggle('nightmode');
+});
 
 document.getElementsByTagName("body")[0].appendChild(div);
 
