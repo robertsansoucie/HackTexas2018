@@ -25,10 +25,24 @@ var bub = document.createElement("button");
 bub.id = "nightmodebub"; // aria-hidden
 
 div.appendChild(bub);
+
+
+/* random meme time! */
+var memeChild = document.createElement("div");
+memeChild.id = "meme";
+memeChild.innerHTML = "<img src='https://d1b10bmlvqabco.cloudfront.net/attach/jl6j590c33q2vu/j6zypxbutj2152/jnb2he73d9ia/is_this_a_spy_device.jpg' width='150' height = '150' alt ='meme'>";
+var mbub = document.createElement("button");
+mbub.id = "mbub";
+mbub.onclick = function(){
+	memeChild.innerHTML = "<img src='https://d1b10bmlvqabco.cloudfront.net/attach/jl6j590c33q2vu/j6v4nghwrg15b/jn2j2k9taodn/p6_meme.png' alt ='meme2'>";
+	window.reload();
+}
+memeChild.append(mbub);
+
+div.append(memeChild); 
+
 document.getElementsByTagName("body")[0].appendChild(divslide);
 document.getElementById("slideout").appendChild(div);
-
-
 
 
 document.getElementById('nightmodebub').addEventListener('click', function() {
