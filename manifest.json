@@ -11,7 +11,7 @@
 	"content_scripts": [
 		{	
 			"matches": ["http://www.cs.utexas.edu/~gheith/*.html"],
-			"js": ["div.js", "contentScript.js", "distribution.js", "numCharacters.js"],
+			"js": ["div.js", "contentScript.js", "distribution.js", "numCharacters.js", "commitIdInput.js"],
 			"css": ["style.css"]
 		}
 	]
