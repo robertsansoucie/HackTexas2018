@@ -23,6 +23,11 @@ chrome.storage.sync.get([sliderValue], function(result) {
 	else {
 		slider.value = result.sliderValue;
 		output.innerHTML = result.sliderValue;
+		for(var x = 1; x < tableRows.length; x++) {
+			var td = tableRows[x].childNodes[0];
+			var commitId = td.id;
+			td.innerHTML = commitId.substring(0, slider.value);
+		}
 	}
 	console.log(slider.value);
 });
