@@ -35,12 +35,16 @@ function getSd(array){
 }
 
 var avg = getMean(numPassed);
-
 var sd = getSd(numPassed);
 
 console.log(Number(avg).toFixed(2));
 console.log(Number(sd).toFixed(2));
 
+var math = document.createElement("p");
+math.id = "math";  
+math.innerHTML = "Average:<br>" + avg + "<br>" + "Standard Dev:<br>" + sd; 
+
+document.getElementById("putTheShitHere").appendChild(math);
 
 var nestNumPassed = []
 for(var i = 0; i<numPassed.length; i++){
